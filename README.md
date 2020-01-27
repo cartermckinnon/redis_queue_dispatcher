@@ -1,5 +1,7 @@
 # redis queue dispatcher
 
+![Rust](https://github.com/cartermckinnon/redis_queue_dispatcher/workflows/Rust/badge.svg)
+
 A "dispatcher" for a delayed task queue built on Redis, written in Rust.
 
 There are 3 functions involved in the delayed/scheduled task queue [described in the Redis e-book](https://redislabs.com/ebook/part-2-core-concepts/chapter-6-application-components-in-redis/6-4-task-queues/6-4-2-delayed-tasks/):
