@@ -38,3 +38,9 @@ Optional arguments:
   -n,--batch-size BATCH_SIZE
                         Number of tasks to dispatch at once (default: 10).
 ```
+
+### Notes
+
+Lua scripting is used to implement an atomic "dispatch" operation. Lua is used because it is (a) faster than locks, and (b) is less complicated (in the opinion of the author). This operation can be performed on more than one element at a time, to reduce round-trips.
+
+Polling overhead should be kept to a minimum, meaning only a small number of this program should run simultaneously. If there are no tasks to be dispatched, polling is less frequent (exponential backoff).
